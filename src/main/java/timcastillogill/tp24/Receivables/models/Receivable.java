@@ -6,7 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class PayloadEntity {
+public class Receivable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -28,10 +28,10 @@ public class PayloadEntity {
 	private String debtorCountryCode;
 	private String debtorRegistrationNumber;
 
-	public PayloadEntity() {
+	public Receivable() {
 
 	}
-	public PayloadEntity(String reference, String currencyCode, String issueDate, double openingValue, double paidValue, String dueDate, String closedDate, boolean cancelled, String debtorName, String debtorReference, String debtorAddress1, String debtorAddress2, String debtorTown, String debtorState, String debtorZip, String debtorCountryCode, String debtorRegistrationNumber) {
+	public Receivable(String reference, String currencyCode, String issueDate, double openingValue, double paidValue, String dueDate, String closedDate, boolean cancelled, String debtorName, String debtorReference, String debtorAddress1, String debtorAddress2, String debtorTown, String debtorState, String debtorZip, String debtorCountryCode, String debtorRegistrationNumber) {
 		this.reference = reference;
 		this.currencyCode = currencyCode;
 		this.issueDate = issueDate;
